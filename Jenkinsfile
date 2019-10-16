@@ -46,14 +46,14 @@ node {
       dockerImage = docker.build("hello-world-java")
     }
    
-    stage('Deploy Docker Image'){
+    // stage('Deploy Docker Image'){
       
-      // deploy docker image to nexus
+    //   // deploy docker image to nexus
 
-      echo "Docker Image Tag Name: ${dockerImageTag}"
+    //   echo "Docker Image Tag Name: ${dockerImageTag}"
 
-      sh "docker login -u admin -p admin123 ${dockerRepoUrl}"
-      sh "docker tag ${dockerImageName} ${dockerImageTag}"
-      sh "docker push ${dockerImageTag}"
-    }
+    //   sh "docker login -u admin -p admin123 ${dockerRepoUrl}"
+    //   sh "docker tag ${dockerImageName} ${dockerImageTag}"
+    //   sh "docker push ${dockerImageTag}"
+    // }
 }
